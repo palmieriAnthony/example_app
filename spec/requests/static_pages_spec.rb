@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'application_helper'
 
 describe "Static pages" do
 
@@ -7,9 +8,9 @@ describe "Static pages" do
   describe "Home page" do
     before { visit root_path }
 
-    it { should have_selector('h1',    text: 'Sample App') }
-    it { should have_selector('title', text: full_title('Home')) }
-    
+    it { should have_selector('h1',    text: 'Example App') }
+    it { should have_selector('title', text: full_title('')) }
+    it { should_not have_selector 'title', text: '| Home' }
   end
 
   describe "Help page" do
@@ -33,3 +34,4 @@ describe "Static pages" do
     it { should have_selector('title', text: full_title('Contact')) }
   end
 end
+
