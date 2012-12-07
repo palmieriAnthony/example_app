@@ -1,8 +1,2 @@
 ==Don't read me
 Comp.Sci. (300) coursework
-
-bundle install
-bundle rake db:reset
-bundle rake db:populate
-bundle rake db:test:prepare
-bundle exec rspec spec/
